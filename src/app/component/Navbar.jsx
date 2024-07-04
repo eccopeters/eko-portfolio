@@ -22,19 +22,20 @@ const Navbar = () => {
     <nav className='fixed left-0 right-0 z-10 bg-[#121212] bg-opacity-90' >
         <div className="flex flex-wrap items-center justify-between mx-auto p-2 px-4 w-full">
             <Link href={'/'} className=' text-2xl text-white font-semibold '>Logo</Link>
-           (//Mobile NavBar) 
-            <div className='hidden md:block md:w-auto'>
-                <ul className='flex md:p-2 md:flex-row md:space-x-8'>
+           
+            <div className='md:hidden block md:w-auto'>
+                <ul className='flex flex-row md:p-2 md:flex-row md:space-x-8 '>
                 {
                     navLinks.map((link, index)=>(
                         <li key={index}>
-                            <NavLink href={link.path} 
+                            <NavLink  href={link.path} 
                                 title={link.title}
                             />
                         </li>
                     ))
                         
                     }
+                    
                 </ul>
             </div>
             <div className='menu hidden lg:block md:w-auto ' id='navbar'>
